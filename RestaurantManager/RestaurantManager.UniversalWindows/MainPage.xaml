@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="txtLogo" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Restaurant Manager" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="96"/>
         <TextBlock x:Name="txtVersion" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Internal Test Version" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="40"/>
-        <TextBlock x:Name="btnOrders" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="**Go to Orders View**" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
-        <TextBlock x:Name="btnSubmit" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="**Submit Order**" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
+        <Button x:Name="btnOrders" Grid.Row="2" Grid.Column="0" Content="Go to Orders View" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnOrders_Click" />
+        <Button x:Name="btnSubmit" Grid.Row="2" Grid.Column="1" Content="Submit Order" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnSubmit_Click" />
     </Grid>
 </Page>

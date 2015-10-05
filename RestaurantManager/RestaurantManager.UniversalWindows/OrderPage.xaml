@@ -7,6 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="btnHome" Icon="Home" Label="Home" HorizontalAlignment="Left" Click="btnHome_Click" />
+        </CommandBar>
+    </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*" />
@@ -20,9 +25,12 @@
             <ColumnDefinition Width="0.25*" />
             <ColumnDefinition Width="0.25*" />
         </Grid.ColumnDefinitions>
+
         <TextBlock x:Name="txtSpecial" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Speical Requests:" FontSize="40"/>
         <TextBlock x:Name="txtItems" Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" Text="Order Items:" FontSize="40"/>
-        <TextBlock x:Name="btnAdd" Grid.Row="4" Grid.Column="0" TextWrapping="Wrap" Text="**Add to Order**" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
-        <TextBlock x:Name="btnSubmit" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="**Submit Order**" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
+        <Button x:Name="btnAdd" Grid.Row="4" Grid.Column="0"  Content="Add to Order" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button x:Name="btnSubmit" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Content="Submit Order" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ListView x:Name="lsvItems" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3"/>
+        <ListView x:Name="lsvOrderItems" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2"/>
     </Grid>
 </Page>
