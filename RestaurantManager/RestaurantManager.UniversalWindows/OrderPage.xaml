@@ -28,9 +28,9 @@
 
         <TextBlock x:Name="txtSpecial" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Speical Requests:" FontSize="40"/>
         <TextBlock x:Name="txtItems" Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" Text="Order Items:" FontSize="40"/>
-        <Button x:Name="btnAdd" Grid.Row="4" Grid.Column="0"  Content="Add to Order" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Button x:Name="btnSubmit" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Content="Submit Order" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <ListView x:Name="lsvItems" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3"/>
-        <ListView x:Name="lsvOrderItems" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2"/>
+        <Button x:Name="btnAdd" Grid.Row="4" Grid.Column="0"  Content="Add to Order" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnAdd_Click"/>
+        <Button x:Name="btnSubmit" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Content="Submit Order" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnSubmit_Click"/>
+        <ListView x:Name="lsvItems" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" DataContext="{StaticResource DataManager}" ItemsSource="{Binding MenuItems}"/>
+        <ListView x:Name="lsvOrderItems" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" DataContext="{StaticResource DataManager}" ItemsSource="{Binding CurrentlySelectedMenuItems}"/>
     </Grid>
 </Page>

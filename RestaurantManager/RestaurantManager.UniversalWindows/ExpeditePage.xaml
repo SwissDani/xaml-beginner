@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
-        <GridView x:Name="grdOrders" Grid.Row="0" Grid.Column="0"/>
-        <Button x:Name="btnClear" Grid.Row="1" Grid.Column="0"  Content="Clear All Orders" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <GridView x:Name="grdOrders" Grid.Row="0" Grid.Column="0" DataContext="{StaticResource DataManager}" ItemsSource="{Binding OrderItems}"/>
+        <Button x:Name="btnClear" Grid.Row="1" Grid.Column="0"  Content="Clear All Orders" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnClear_Click"/>
     </Grid>
 </Page>

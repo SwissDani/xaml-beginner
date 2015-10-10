@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,11 @@ namespace RestaurantManager.UniversalWindows {
 		
 		private void btnHome_Click(object sender, RoutedEventArgs e) {
 			Frame.Navigate(typeof(MainPage));
+		}
+
+		private void btnClear_Click(object sender, RoutedEventArgs e) {
+			DataManager dataMgr = Application.Current.Resources["DataManager"] as DataManager;
+			dataMgr.OrderItems.Clear();
 		}
 	}
 }
